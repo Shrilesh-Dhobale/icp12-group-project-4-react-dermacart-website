@@ -6,3 +6,16 @@ function Login() {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const handleLogin = (e) => {
+    e.preventDefault();
+
+    const storedEmail = localStorage.getItem("email");
+    const storedPassword = localStorage.getItem("password");
+
+    if (email === storedEmail && password === storedPassword) {
+      alert("Login Successful");
+      navigate("/home");
+    } else {
+      alert("Invalid Credentials");
+    }
+  };
