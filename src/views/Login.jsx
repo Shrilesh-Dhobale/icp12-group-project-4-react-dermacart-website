@@ -40,3 +40,23 @@ function Login() {
               placeholder="you@example.com"
             />
           </div>
+           <div>
+            <label className="block text-sm font-medium text-gray-700">
+              Password
+            </label>
+            <input
+              type="password"
+              required
+              onChange={(e) => setPassword(e.target.value)}
+              className="mt-1 w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              placeholder="Enter your password"
+            />
+          </div>
+
+          <button
+            type="submit"
+            className="w-full py-2 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition cursor-pointer"
+          >
+            Log In
+          </button>
+        </form>
