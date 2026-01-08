@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import "./../index.css"
 
 const Home = () => {
   return (
@@ -7,8 +8,7 @@ const Home = () => {
       <Navbar />
      
 
-      {/* Hero Section */}
-      <section className="bg-[#f4ede4] min-h-[90vh] flex items-center">
+      <section className="bg-[rgb(247,220,186)] min-h-[90vh] flex items-center">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10">
 
           <div>
