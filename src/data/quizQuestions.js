@@ -51,6 +51,31 @@ const quizData = [
       },
     ],
   },
-
+{
+    id: 3,
+    question: "How does your skin look by the end of the day?",
+    options: [
+      {
+        id: "oily",
+        label: "Shiny",
+        image: "./../public/oily-shiny.jpg",
+      },
+      {
+        id: "dry",
+        label: "Dull or flaky",
+        image: "./../public/dry-flaky.jpg",
+      },
+      {
+        id: "normal",
+        label: "Fresh and balanced",
+        image: "./../public/normal-fresh.jpg",
+      },
+      {
+        id: "combination",
+        label: "Shiny in some areas",
+        image: "./../public/com-shiny.jpg",
+      },
+    ],
+  },
 ];
   export default quizData;
