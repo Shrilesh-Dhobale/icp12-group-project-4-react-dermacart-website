@@ -25,5 +25,32 @@ const quizData = [
       },
     ],
   },
+  {
+    id: 2,
+    question: "How often does your skin get oily during the day?",
+    options: [
+      {
+        id: "oily",
+        label: "Very often",
+        image: "./../public/oily-often.jpg",
+      },
+      {
+        id: "combination",
+        label: "Only T-zone area",
+        image: "./../public/t-zone.jpg",
+      },
+      {
+        id: "normal",
+        label: "Rarely",
+        image: "./../public/normal.jpg",
+      },
+      {
+        id: "dry",
+        label: "Never",
+        image: "./../public/dry.jpg",
+      },
+    ],
+  },
+
 ];
   export default quizData;
