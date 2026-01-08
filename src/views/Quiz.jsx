@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import toast, { Toaster } from 'react-hot-toast';
+import toast, { Toaster } from "react-hot-toast";
 import QuizOption from "../components/QuizQuestion";
 import quizData from "../data/quizQuestions";
 
@@ -41,6 +41,16 @@ function Quiz() {
 
     setResult(resultKey);
     toast.success(`Your skin type appears to be: ${resultKey}`);
+    localStorage.setItem("skinTypeResult", resultKey);
+  }
+
+  //PREVIOUS BUTTON FUNCTION
+  function handlePrevious() {
+    if (current === 0) return;
+
+    const prevQuestionId = quizData[current - 1].id;
+    setCurrent((c) => c - 1);
+    setSelected(answers[prevQuestionId] || null);
   }
 
   const productMap = {
@@ -80,6 +90,7 @@ function Quiz() {
 
   function useProduct(product) {
     toast.success(`You can use: ${product.name}`);
+    localStorage.setItem("skinTypeResult", resultKey);
   }
 
   function restart() {
@@ -99,14 +110,14 @@ function Quiz() {
     >
       <Toaster position="top-center" />
 
-      <div className="w-full max-w-[500px] bg-white/35 backdrop-blur-lg rounded-2xl shadow-xl border border-pink-300 px-4 py-5">
-        <h1 className="text-base sm:text-2xl font-semibold text-center mb-2">
+      <div className="mt-20 w-full max-w-[500px] bg-white/35 backdrop-blur-lg rounded-2xl shadow-xl border border-[#2B2B2B] px-4 py-5">
+        <h1 className="text-base text-[#2B2B2B] sm:text-2xl font-semibold text-center mb-2">
           Know Your Skin Type
         </h1>
 
         {!result ? (
           <>
-            <p className="text-xs sm:text-base text-center mb-3">
+            <p className="text-xs sm:text-base text-center mb-4 text-[#6b8f71]">
               {question.id}. {question.question}
             </p>
 
@@ -121,16 +132,25 @@ function Quiz() {
                 />
               ))}
             </div>
+            <div className="flex justify-between mt-4 gap-2">
+              <button
+                onClick={handlePrevious}
+                disabled={current === 0}
+                className={`px-6 py-2 rounded-xl text-sm font-semibold transition ${current === 0
+                  ? "bg-[#2f5d50] text- cursor-not-allowed"
+                  : "bg-[#2f5d50] text-white active:scale-95"
+                  }`}
+              >
+                Previous
+              </button>
 
-            <div className="flex justify-end mt-4">
               <button
                 onClick={handleNext}
                 disabled={!selected}
-                className={`px-6 py-2 rounded-xl text-sm font-semibold transition ${
-                  selected
-                    ? "bg-white/70 text-gray-800 active:scale-95"
-                    : "bg-gray-300 text-gray-500 cursor-not-allowed"
-                }`}
+                className={`px-6 py-2 rounded-xl text-sm font-semibold transition ${selected
+                  ? "bg-[#2f5d50] text-white active:scale-95"
+                  : "bg-[#2f5d50] text-white cursor-not-allowed"
+                  }`}
               >
                 {current < quizData.length - 1 ? "Next" : "Finish"}
               </button>
@@ -138,7 +158,7 @@ function Quiz() {
           </>
         ) : (
           <>
-            <p className="text-sm text-center mb-3">
+            <p className="text-lg text-center mb-3">
               <strong>Result:</strong> {result}
             </p>
 
@@ -155,28 +175,31 @@ function Quiz() {
                   />
 
                   <div className="flex-1">
-                    <div className="text-sm font-medium">{p.name}</div>
-                    <div className="text-xs text-gray-600">{p.desc}</div>
+                    <div className="text-lg font-medium">{p.name}</div>  
+                    <div className="text-md text-gray-600">{p.desc}</div>
                   </div>
-
-                  <button
-                    onClick={() => useProduct(p)}
-                    className="px-3 py-1 text-xs rounded-lg bg-indigo-600 text-white active:scale-95"
-                  >
-                    Use
-                  </button>
                 </div>
+
               ))}
             </div>
-
+            <button
+              onClick={() => {
+                const url = `./../Products.jsx ?skinType=${result}`;
+                window.open(url, "_blank");
+              }}
+              className="mt-4 w-full py-2 text-sm rounded-xl font-semibold bg-[#2f5d50] text-white active:scale-95"
+            >
+              Get Personalized Products
+            </button>
             <button
               onClick={restart}
-              className="mt-4 w-full py-2 text-sm rounded-xl font-semibold bg-white/70 active:scale-95"
+              className="mt-4 w-full py-2 text-sm rounded-xl font-semibold bg-[#2f5d50] text-white active:scale-95"
             >
               Retake Quiz
             </button>
           </>
         )}
+
       </div>
     </div>
   );
