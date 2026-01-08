@@ -2,7 +2,7 @@
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import { BrowserRouter, Routes, Route } from 'react-router'
-import ProductCard from './components/ProductCard';
+import Products from './views/Products.jsx'
 
 
 const root = createRoot(document.getElementById('root'));
@@ -12,7 +12,7 @@ root.render(
     
     <Routes>
       <Route path="/" element={<h1>Home</h1>} />
-      <Route path="/products" element={<ProductCard />} />
+      <Route path="/products" element={<Products />} />
      
     </Routes>
   </BrowserRouter>
