@@ -111,13 +111,13 @@ function Quiz() {
       <Toaster position="top-center" />
 
       <div className="mt-20 w-full max-w-[500px] bg-white/35 backdrop-blur-lg rounded-2xl shadow-xl border border-[#2B2B2B] px-4 py-5">
-        <h1 className="text-base text-[#2B2B2B] sm:text-2xl font-semibold text-center mb-2">
+        <h1 className="text-base text-[#2B2B2B] lg:text-2xl font-semibold text-center mb-2">
           Know Your Skin Type
         </h1>
 
         {!result ? (
           <>
-            <p className="text-xs sm:text-base text-center mb-4 text-[#6b8f71]">
+            <p className="text-xs lg:text-base text-center mb-4 text-[#6b8f71]">
               {question.id}. {question.question}
             </p>
 
@@ -137,7 +137,7 @@ function Quiz() {
                 onClick={handlePrevious}
                 disabled={current === 0}
                 className={`px-6 py-2 rounded-xl text-sm font-semibold transition ${current === 0
-                  ? "bg-[#2f5d50] text- cursor-not-allowed"
+                  ? "bg-[#2f5d50] text-white cursor-not-allowed"
                   : "bg-[#2f5d50] text-white active:scale-95"
                   }`}
               >
