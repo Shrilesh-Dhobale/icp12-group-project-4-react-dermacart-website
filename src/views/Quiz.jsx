@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import QuizOption from "../components/QuizQuestion";
-import quizData from "../data/quizQuestions";
+import quizData from "../views/quizQuestions";
 
 function Quiz() {
   const [current, setCurrent] = useState(0);
