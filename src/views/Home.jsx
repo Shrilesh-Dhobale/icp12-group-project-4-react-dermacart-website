@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Button from "../components/Button";
 import "./../index.css"
 
 const Home = () => {
@@ -22,9 +23,11 @@ const Home = () => {
             </p>
 
             <div className="mt-6 flex gap-4">
-              <button className="bg-green-800 text-white px-6 py-3 rounded-full">
-                Explore Products
-              </button>
+              <div className='my-2'>
+                    <Button title={"Book Now"} variant='primary' size='lg' onClick={()=>{
+                        navigate(`/productcard/${id}`)
+                    }}/>
+                </div>
               <button className="border border-green-800 px-6 py-3 rounded-full">
                 Learn More
               </button>
