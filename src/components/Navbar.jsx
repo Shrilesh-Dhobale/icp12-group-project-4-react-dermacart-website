@@ -28,7 +28,7 @@ const Navbar = () => {
           <li className="hover:text-green-700 cursor-pointer">About</li>
           <li className="hover:text-green-700 cursor-pointer">Contact</li>
         </ul>
-            {
+                     {
   email && (
     <div className="ml-auto flex items-center gap-3 
                     rounded-full border border-[#2F5D50] 
@@ -63,6 +63,7 @@ const Navbar = () => {
 }
 
       </div>
+
 
       {open && (
         <div className="md:hidden px-6 pb-4">
