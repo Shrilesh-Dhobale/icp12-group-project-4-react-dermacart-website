@@ -4,3 +4,5 @@
 
 # Quiz page 
 [![Quiz page] (Screenshots/Quiz.jpeg)]
+# Quiz Page Result
+[![Quiz Page Result](Screenshots/result.jpeg)]
