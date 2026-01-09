@@ -1,6 +1,6 @@
 import React from 'react'
-import products from '../views/products.js'
-import { BG_color } from '../views/app.js'
+import products from '../config/products.js'
+import { BG_color } from '../config/app.js'
 import ProductCard from '../components/ProductCard.jsx'
 import { useState } from 'react'
 

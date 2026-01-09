@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import QuizOption from "../components/QuizQuestion";
-import quizData from "../views/quizQuestions";
+import quizData from "../config/quizQuestions";
 import bgImage from "../assets/bg-2.jpeg";
 import oilClean from "../assets/oil-clean.jpeg";
 import cream from "../assets/cream.jpeg";

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Primary_color, Main_Text_color, Sub_Headers_color, Hero_BG_color } from '../views/app.js'
+import { Primary_color, Main_Text_color, Sub_Headers_color, Hero_BG_color } from '../config/app.js'
 
 function ProductCard({ product }) {
   return (
