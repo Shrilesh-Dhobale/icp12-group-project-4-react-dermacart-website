@@ -1,17 +1,16 @@
 import React from 'react'
-import products from '../views/products.js'
-import {BG_color,Hero_BG_color,Primary_color,Main_Text_color,Sub_Headers_color}from '../views/app.js'
+import { Primary_color, Main_Text_color, Sub_Headers_color, Hero_BG_color } from '../views/app.js'
 
-function ProductCard({products}) {
+function ProductCard({ product }) {
   return (
-    
-        <div key={products.id} className="bg-white rounded-lg shadow-md p-4 w-84">
-          <img src={products.img} alt={products.name} className="w-full h-68 object-cover rounded-md mb-2" />
-          <h3 className="text-lg font-semibold">{products.name}</h3>
-          <p className="text-gray-600">{products.description}</p>
-          <p className="text-green-600 font-bold">₹{products.price}</p>
-        </div>
-    
+    <div className="bg-white rounded-lg shadow-md p-4 w-69 relative size-85" style={{ backgroundColor: Hero_BG_color }} >
+      <div className="h-48 flex items-center justify-center bg-gray-50 rounded-md mb-2 overflow-hidden">
+        <img src={product.img} alt={product.name} className="max-h-full w-auto object-contain" />
+      </div>
+      <h3 className="text-lg font-semibold" style={{ color: Main_Text_color }}>{product.name}</h3>
+      <p className="text-sm" style={{ color: Sub_Headers_color }}>{product.description}</p>
+      <p className="font-bold mt-2 absolute bottom-5 left-5" style={{ color: Primary_color }}>₹{product.price}</p>
+    </div>
   )
 }
 

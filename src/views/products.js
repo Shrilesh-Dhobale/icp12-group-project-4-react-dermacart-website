@@ -55,7 +55,7 @@ const products = [
   {
     id: 6,
     img: dry3,
-    name: "DermaCart Moisturizing Body Wash",
+    name: "DermaCart Body Wash",
     price: 189,
     description: "A body wash that hydrates and soothes dry skin.",
     type: "Dry"
