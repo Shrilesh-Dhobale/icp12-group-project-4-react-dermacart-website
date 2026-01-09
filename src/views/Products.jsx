@@ -10,14 +10,16 @@ function Products() {
     <div className="min-h-screen py-8" style={{ backgroundColor: BG_color }}>
       <div className='flex flex-row-reverse p-4 gap-4'>
         <select
-          type="text"
-          placeholder="Sort by ..."
+          value={sortItem}
+          onChange={(e) => setSortItem(e.target.value)}
           className="w-1/6 p-2 mb-6 rounded-md border border-gray-300 focus:outline-none focus:ring-1"
-        />
-        <option>Sort by Price: Low to High</option>
-        <option>Sort by Price: High to Low</option>
-        <option>Sort by Name: A to Z</option>
-        <option>Sort by Name: Z to A</option>
+        >
+        <option value="default">Sort By</option>
+        <option>Price: Low to High</option>
+        <option>Price: High to Low</option>
+        <option>Name: A to Z</option>
+        <option>Name: Z to A</option>
+        </select>
         <input
           type="text"
           placeholder="Search products..."
