@@ -4,6 +4,12 @@ import logo from "../assets/logo-navbar.jpeg"
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+   const navigate = useNavigate();
+  const email = localStorage.getItem("email");
+
+  const handleLogout = () => {
+    navigate("/login");
+  }
 
   return (
     <nav className="bg-white shadow-sm">
@@ -22,11 +28,40 @@ const Navbar = () => {
           <li className="hover:text-green-700 cursor-pointer">About</li>
           <li className="hover:text-green-700 cursor-pointer">Contact</li>
         </ul>
-             <div>
-                    <Button title={"Order Now"} variant='primary' size='lg' onClick={()=>{
-                        navigate(`/order/${id}`)
-                    }}/>
-                </div>
+            {
+  email && (
+    <div className="ml-auto flex items-center gap-3 
+                    rounded-full border border-[#2F5D50] 
+                    px-2 py-1 shadow-sm bg-white">
+
+      
+      <span className="bg-[#2F5D50] text-white px-4 py-1 rounded-full text-sm">
+        {email}
+      </span>
+
+    
+      <button
+        onClick={handleLogout}
+        className="text-[#2F5D50] px-3 py-1 rounded-full text-sm
+                   hover:bg-[#2F5D50] hover:text-white
+                   transition"
+      >
+        Logout
+      </button>
+
+      
+      <button
+        onClick={() => navigate(`/order/${id}`)}
+        className="bg-[#2F5D50] text-white px-4 py-1 rounded-full text-sm
+                   hover:bg-[#264D43] transition"
+      >
+        Order Now
+      </button>
+
+    </div>
+  )
+}
+
       </div>
 
       {open && (
