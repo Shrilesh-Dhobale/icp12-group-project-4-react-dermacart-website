@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Button from "./Button";
-import logo from "../components/logo-navbar.jpeg"
+import logo from "../assets/logo-navbar.jpeg"
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
