@@ -75,23 +75,23 @@ Live Project:  https://dermacart.netlify.app/
 
 <p align="center">
   <a href="https://github.com/shreya-harde">
-    <img src="https://github.com/shreya-harde" width="80" style="border-radius:50%" />
+    <img src="https://avatars.githubusercontent.com/shreya-harde" width="80" height="80" />
   </a>
   <a href="https://github.com/Shrilesh-Dhobale">
-    <img src="https://github.com/Shrilesh-Dhobale" width="80" style="border-radius:50%" />
+    <img src="https://avatars.githubusercontent.com/Shrilesh-Dhobale" width="80" height="80" />
   </a>
   <a href="https://github.com/OmKadam-1">
-    <img src="https://github.com/OmKadam-1" width="80" style="border-radius:50%" />
+    <img src="https://avatars.githubusercontent.com/OmKadam-1" width="80" height="80" />
   </a>
-  <a href="https://github.com/suraj0620/">
-    <img src="https://github.com/suraj0620/" width="80" style="border-radius:50%" />
+  <a href="https://github.com/suraj0620">
+    <img src="https://avatars.githubusercontent.com/suraj0620" width="80" height="80" />
   </a>
   <a href="https://github.com/kalyanimurkute">
-    <img src="https://github.com/kalyanimurkute" width="80" style="border-radius:50%" />
+    <img src="https://avatars.githubusercontent.com/kalyanimurkute" width="80" height="80" />
   </a>
-   <a href="https://github.com/NikitaChormale">
-    <img src="https://github.com/NikitaChormale" width="80" style="border-radius:50%" />
+  <a href="https://github.com/NikitaChormale">
+    <img src="https://avatars.githubusercontent.com/NikitaChormale" width="80" height="80" />
   </a>
 </p>
 
-<
+
