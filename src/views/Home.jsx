@@ -2,22 +2,16 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Button from "../components/Button";
 import { useNavigate } from "react-router-dom";
-
 import "./../index.css"
 
 const Home = () => {
   const navigate = useNavigate();
-  const email = localStorage.getItem("email");
-
-  const logout = () => {
-    navigate("/login");
-  };
   return (
     <>
       <Navbar />
      
 
-      <section className="bg-[rgb(247,220,186)] min-h-[90vh] flex items-center">
+      <section className="my-2 min-h-[90vh] flex items-center">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10">
 
           <div>
@@ -32,13 +26,16 @@ const Home = () => {
 
             <div className="mt-6 flex gap-4">
               <div className='my-2'>
-                    <Button title={"Book Now"} variant='primary' size='lg' onClick={()=>{
-                        navigate(`/productcard/${id}`)
+                    <Button title={"Show Product"} variant='primary' size='lg' onClick={()=>{
+                        navigate(`/Products`)
+                    }}/>
+                    </div>
+                    <div className='my-2'>
+                    <Button title={"Call Us"} variant='primary' size='lg' onClick={()=>{
+                        navigate(`/Contact`)
                     }}/>
                 </div>
-              <button className="border border-green-800 px-6 py-3 rounded-full">
-                Learn More
-              </button>
+              
             </div>
           </div>
 
@@ -53,8 +50,8 @@ const Home = () => {
               <li>✔ Trusted Brands</li>
             </ul>
           </div>
-
         </div>
+
       </section>
        <Footer/>
     </>
