@@ -17,7 +17,7 @@ function Register() {
     navigate("/login");
   };
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 px-4">
+    <div className="min-h-screen flex items-center justify-center bg-[#F8DEBC] px-4">
       
       <div className="w-full max-w-md backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl shadow-2xl p-8">
         
