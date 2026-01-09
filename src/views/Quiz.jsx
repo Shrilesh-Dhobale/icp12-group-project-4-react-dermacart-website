@@ -2,6 +2,11 @@ import React, { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import QuizOption from "../components/QuizQuestion";
 import quizData from "../views/quizQuestions";
+import bgImage from "../assets/bg-2.jpeg";
+import oilClean from "../assets/oil-clean.jpeg";
+import cream from "../assets/cream.jpeg";
+import normalProduct from "../assets/normal.jpeg";
+import combinationProduct from "../assets/combination.jpeg";
 
 function Quiz() {
   const [current, setCurrent] = useState(0);
@@ -58,7 +63,7 @@ function Quiz() {
         id: "o1",
         name: "Oil Control Cleanser",
         desc: "Controls sebum and reduces shine",
-        image: "/oil-clean.jpeg",
+        image: oilClean,
       },
     ],
     dry: [
@@ -66,7 +71,7 @@ function Quiz() {
         id: "d1",
         name: "Hydrating Cream",
         desc: "Deep hydration for dry skin",
-        image: "/cream.jpeg",
+        image: cream,
       },
     ],
     normal: [
@@ -74,7 +79,7 @@ function Quiz() {
         id: "n1",
         name: "Daily Balancer",
         desc: "Maintains healthy skin",
-        image: "/normal.jpeg",
+        image: normalProduct,
       },
     ],
     combination: [
@@ -82,7 +87,7 @@ function Quiz() {
         id: "c1",
         name: "Balance Lotion",
         desc: "Hydrates dry areas, controls oily zones",
-        image: "/combination.jpeg",
+        image: combinationProduct,
       },
     ],
   };
@@ -103,7 +108,7 @@ function Quiz() {
     <div
       className="min-h-screen w-full flex items-center justify-center bg-cover bg-center bg-no-repeat px-2 sm:px-6"
       style={{
-        backgroundImage: "url('/bg-2.jpeg')",
+        backgroundImage: `url('${bgImage}')`,
         backgroundSize: "100% 100%",
       }}
     >

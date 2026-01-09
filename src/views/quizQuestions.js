@@ -1,3 +1,14 @@
+import shiny1 from '../assets/shiny1.jpg';
+import dry from '../assets/dry.jpg';
+import normal from '../assets/normal.jpg';
+import combination from '../assets/combination.jpg';
+import oilyOften from '../assets/oily-often.jpg';
+import tZone from '../assets/t-zone.jpg';
+import oilyShiny from '../assets/oily-shiny.jpg';
+import dryFlaky from '../assets/dry-flaky.jpg';
+import normalFresh from '../assets/normal-fresh.jpg';
+import comShiny from '../assets/com-shiny.jpg';
+
 const quizData = [
     {
         id: 1,
@@ -6,22 +17,22 @@ const quizData = [
             {
                 id: "oily",
                 label: "Greasy / Shiny",
-                image: "/shiny1.jpg",
+                image: shiny1,
             },
             {
                 id: "dry",
                 label: "Tight / Dry",
-                image: "/dry.jpg",
+                image: dry,
             },
             {
                 id: "normal",
                 label: "Comfortable / Soft",
-                image: "/normal.jpg",
+                image: normal,
             },
             {
                 id: "combination",
                 label: "Oily in some areas, dry in others",
-                image: "/combination.jpg",
+                image: combination,
             },
         ],
     },
@@ -32,22 +43,22 @@ const quizData = [
             {
                 id: "oily",
                 label: "Very often",
-                image: "/oily-often.jpg",
+                image: oilyOften,
             },
             {
                 id: "combination",
                 label: "Only T-zone area",
-                image: "/t-zone.jpg",
+                image: tZone,
             },
             {
                 id: "normal",
                 label: "Rarely",
-                image: "/normal.jpg",
+                image: normal,
             },
             {
                 id: "dry",
                 label: "Never",
-                image: "/dry.jpg",
+                image: dry,
             },
         ],
     },
@@ -56,22 +67,22 @@ const quizData = [
         question: "How does your skin look by the end of the day?",
         options: [
             {
-                id: "oily",label: "Shiny",image: "/oily-shiny.jpg",
+                id: "oily",label: "Shiny",image: oilyShiny,
             },
             {
                 id: "dry",
                 label: "Dull or flaky",
-                image: "/dry-flaky.jpg",
+                image: dryFlaky,
             },
             {
                 id: "normal",
                 label: "Fresh and balanced",
-                image: "/normal-fresh.jpg",
+                image: normalFresh,
             },
             {
                 id: "combination",
                 label: "Shiny in some areas",
-                image: "/com-shiny.jpg",
+                image: comShiny,
             },
         ],
     },
