@@ -15,10 +15,10 @@ function Products() {
           className="w-1/6 p-2 mb-6 rounded-md border border-gray-300 focus:outline-none focus:ring-1"
         >
         <option value="default">Sort By</option>
-        <option>Price: Low to High</option>
-        <option>Price: High to Low</option>
-        <option>Name: A to Z</option>
-        <option>Name: Z to A</option>
+        <option value="LowtoHigh">Price: Low to High</option>
+        <option value="HightoLow">Price: High to Low</option>
+        <option value="NameAtoZ">Name: A to Z</option>
+        <option value="NameZtoA">Name: Z to A</option>
         </select>
         <input
           type="text"
