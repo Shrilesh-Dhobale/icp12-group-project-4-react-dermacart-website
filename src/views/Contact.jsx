@@ -22,7 +22,7 @@ export default function Contact() {
           Contact Us
         </h2>
         <p className="mt-2 text-center text-[#6b5a47]">
-          We are hear to help you
+          We are here to help you
         </p>
 
         {/* Success Message */}

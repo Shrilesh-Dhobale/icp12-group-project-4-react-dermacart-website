@@ -6,16 +6,16 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-sm ">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <nav className="bg-white shadow-sm">
+      <div className="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center">
         
        <img
   src={logo}
   alt="Dermacart Logo"
-  className="h-35 w-auto cursor-pointer"
+  className="h-22 w-auto cursor-pointer"
 />
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-8 text-gray-700 font-medium">
+        <ul className="hidden md:flex space-x-6 text-gray-700 font-medium text-sm">
           <li className="hover:text-green-700 cursor-pointer">Home</li>
           <li className="hover:text-green-700 cursor-pointer">Shop</li>
           <li className="hover:text-green-700 cursor-pointer">Skin Care</li>
