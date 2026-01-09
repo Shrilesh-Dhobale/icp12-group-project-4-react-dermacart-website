@@ -6,7 +6,12 @@ import { useState } from 'react'
 
 function Products() {
   const [sortItem, setSortItem] = useState('');
-  
+  const [searchTerm, setSearchTerm] = useState('');
+
+  let filteredProducts = products.filter((product) =>
+    product.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   if (sortItem === 'default') {
     products.sort((a, b) => a.id - b.id);
   }
@@ -38,13 +43,15 @@ function Products() {
         </select>
         <input
           type="text"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
           placeholder="Search products..."
           className="w-1/6 p-2 mb-6 rounded-md border border-gray-300 focus:outline-none focus:ring-1"
         />
         
       </div>
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
-        {products.map((product) => (
+        {filteredProducts.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
