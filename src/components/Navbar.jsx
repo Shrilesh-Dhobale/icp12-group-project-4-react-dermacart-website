@@ -21,8 +21,8 @@ const Navbar = () => {
           <li> < Link to ="/" 
           className="hover:text-green-700 cursor-pointer">
             Home </Link> </li>
-          <li >  < Link to ="/Product" 
-          className="hover:text-green-700 cursor-pointer">Skin Care </Link></li>
+          <li >  < Link to ="/products" 
+          className="hover:text-green-700 cursor-pointer">Products </Link></li>
           <li >< Link to ="/Order" 
           className="hover:text-green-700 cursor-pointer">Order </Link></li>
           <li>< Link to ="/About" 
@@ -47,10 +47,9 @@ const Navbar = () => {
         <div className="md:hidden px-6 pb-4 ">
           <ul className="space-y-4 text-lg">
             <li> <Link to="/">Home</Link></li>
-            <li><Link to="/Order">Shop</Link></li>
-            <li><Link to="/Product">Skin Care</Link></li>
-            <li><Link to="/About">About</Link></li>
-            <li><Link to="/Contact">Contact</Link></li>
+            <li><Link to="/products">Skin Care</Link></li>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
           </ul>
         </div>
       )}

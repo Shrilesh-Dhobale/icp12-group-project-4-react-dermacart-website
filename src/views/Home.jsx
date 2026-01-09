@@ -26,8 +26,8 @@ const Home = () => {
 
             <div className="mt-6 flex gap-4">
               <div className='my-2'>
-                    <Button title={"Show Product"} variant='primary' size='lg' onClick={()=>{
-                        navigate(`/Products`)
+                    <Button title={"Get Product"} variant='primary' size='lg' onClick={()=>{
+                        navigate(`/Quiz`)
                     }}/>
                     </div>
                     <div className='my-2'>

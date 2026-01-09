@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { FaInstagram, FaTwitter, FaEnvelope } from "react-icons/fa";
-import { Primary_color, Main_Text_color, Sub_Headers_color, Hero_BG_color } from '../config/app.js'
+import { Primary_color, Main_Text_color, Sub_Headers_color, Hero_BG_color,BG_color } from '../config/app.js'
+import Navbar from '../components/Navbar.jsx'
+import Footer from '../components/Footer.jsx'
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -16,13 +18,16 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: Hero_BG_color }}>
-      <div className="mx-auto max-w-3xl bg-white rounded-2xl shadow-lg p-8">
+    <>
+      
+      <div className="min-h-screen" style={{ backgroundColor: BG_color }}>
+        <Navbar />
+        <div className="mx-auto max-w-3xl bg-white rounded-2xl shadow-lg p-8 mt-8">
         {/* Heading */}
-        <h2 className="text-3xl font-semibold text-center text-[#4b3b2a]">
+        <h2 className="text-3xl font-semibold text-center " style={{ color: Main_Text_color }}>
           Contact Us
         </h2>
-        <p className="mt-2 text-center text-[#6b5a47]">
+        <p className="mt-2 text-center text-gray-600" style={{ color: Sub_Headers_color }}>
           We are here to help you
         </p>
 
@@ -74,7 +79,7 @@ export default function Contact() {
           {/* Button */}
           <button
             type="submit"
-            className="w-full rounded-lg bg-[#4b3b2a] py-3 text-white font-semibold hover:bg-[#b89b7a] transition"
+            className="w-full rounded-lg  py-3 text-white font-semibold hover:bg-[#b89b7a] transition" style={{ backgroundColor: Primary_color }}
           >
             Send Message
           </button>
@@ -91,7 +96,7 @@ export default function Contact() {
               href="https://instagram.com"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-[#b89b7a] transition"
+              className=" hover:text-[#b89b7a] transition"style={{ color: Sub_Headers_color }}
             >
               <FaInstagram />
             </a>
@@ -100,20 +105,22 @@ export default function Contact() {
               href="https://twitter.com"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-[#b89b7a] transition"
+              className="hover:text-[#b89b7a] transition"style={{ color: Sub_Headers_color }}
             >
               <FaTwitter />
             </a>
 
             <a
               href="mailto:support@dermacart.com"
-              className="hover:text-[#b89b7a] transition"
+              className="hover:text-[#b89b7a] transition"style={{ color: Sub_Headers_color }}
             >
               <FaEnvelope />
             </a>
           </div>
         </div>
+        </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 }
