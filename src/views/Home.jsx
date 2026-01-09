@@ -4,6 +4,12 @@ import Button from "../components/Button";
 import "./../index.css"
 
 const Home = () => {
+  const navigate = useNavigate();
+  const email = localStorage.getItem("email");
+
+  const logout = () => {
+    navigate("/login");
+  };
   return (
     <>
       <Navbar />
