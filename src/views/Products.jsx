@@ -2,9 +2,10 @@ import React from 'react'
 import products from '../views/products.js'
 import { BG_color } from '../views/app.js'
 import ProductCard from '../components/ProductCard.jsx'
-
+import { useState } from 'react'
 
 function Products() {
+  const [sortItem, setSortItem] = useState('');
   return (
     <div className="min-h-screen py-8" style={{ backgroundColor: BG_color }}>
       <div className='flex flex-row-reverse p-4 gap-4'>
