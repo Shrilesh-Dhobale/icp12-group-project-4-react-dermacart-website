@@ -2,6 +2,7 @@ import React from 'react'
 import products from '../config/products.js'
 import { BG_color } from '../config/app.js'
 import ProductCard from '../components/ProductCard.jsx'
+import Navbar from '../components/Navbar.jsx'
 import { useState } from 'react'
 
 function Products() {
@@ -28,8 +29,10 @@ function Products() {
     filteredProducts.sort((a, b) => b.name.localeCompare(a.name));
   }
   return (
-    <div className="min-h-screen py-8" style={{ backgroundColor: BG_color }}>
-      <div className='flex flex-row-reverse p-4 gap-4'>
+    <>
+      <Navbar />
+      <div className="min-h-screen py-8" style={{ backgroundColor: BG_color }}>
+        <div className='flex flex-row-reverse p-4 gap-4'>
         <select
           value={sortItem}
           onChange={(e) => setSortItem(e.target.value)}
@@ -54,8 +57,14 @@ function Products() {
         {filteredProducts.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
+        </div>
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+          {filteredProducts.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 

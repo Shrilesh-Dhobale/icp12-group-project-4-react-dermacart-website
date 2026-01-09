@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaInstagram, FaTwitter, FaEnvelope } from "react-icons/fa";
+import { Primary_color, Main_Text_color, Sub_Headers_color, Hero_BG_color } from '../config/app.js'
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -15,7 +16,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f7f3ee] px-6 py-16">
+    <div className="min-h-screen" style={{ backgroundColor: Hero_BG_color }}>
       <div className="mx-auto max-w-3xl bg-white rounded-2xl shadow-lg p-8">
         {/* Heading */}
         <h2 className="text-3xl font-semibold text-center text-[#4b3b2a]">

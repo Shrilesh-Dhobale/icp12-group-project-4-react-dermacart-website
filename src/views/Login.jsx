@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Primary_color, Main_Text_color, Sub_Headers_color, Hero_BG_color } from '../config/app.js'
 
 function Login() {
   const navigate = useNavigate();
@@ -20,10 +21,10 @@ function Login() {
     }
   };
    return (
-    <div className="min-h-screen bg-[#F8DEBC] flex items-center justify-center px-4">
+    <div className="min-h-screen flex items-center justify-center px-4" style={{ backgroundColor: Hero_BG_color }}>
       <div className="max-w-md w-full bg-white rounded-xl shadow-2xl p-8 space-y-6">
         
-        <h2 className="text-center text-3xl font-bold text-gray-800">
+        <h2 className="text-center text-3xl font-bold" style={{ color: Main_Text_color }}>
           Welcome Back
         </h2>
 
@@ -55,7 +56,8 @@ function Login() {
 
           <button
             type="submit"
-            className="w-full py-2 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition cursor-pointer"
+            className="w-full py-2  text-white font-semibold rounded-lg hover:bg-indigo-700 transition cursor-pointer"
+            style={{ backgroundColor: Primary_color }}
           >
             Log In
           </button>

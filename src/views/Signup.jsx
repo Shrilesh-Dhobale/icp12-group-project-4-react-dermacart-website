@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { Primary_color, Main_Text_color, Sub_Headers_color, Hero_BG_color,BG_color } from '../config/app.js'
 
 function Register() {
   const navigate = useNavigate();
@@ -18,18 +18,18 @@ function Register() {
     navigate("/login");
   };
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#F8DEBC] px-4">
+    <div className="min-h-screen flex items-center justify-center  px-4" style={{ backgroundColor: BG_color }}>
       
-      <div className="w-full max-w-md backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl shadow-2xl p-8">
+      <div className="w-full max-w-md backdrop-blur-xl  border border-white/30 rounded-2xl shadow-2xl p-8">
         
-        <h2 className="text-3xl font-extrabold text-white text-center mb-6">
+        <h2 className="text-3xl font-extrabold text-white text-center mb-6" style={{ color: Main_Text_color }}>
           Create Account
         </h2>
 
         <form onSubmit={handleRegister} className="space-y-5">
 
           <div>
-            <label className="block text-sm font-medium text-white mb-1">
+            <label className="block text-sm font-medium  mb-1" style={{ color: Sub_Headers_color }}>
               Email Address
             </label>
             <input
@@ -37,13 +37,12 @@ function Register() {
               required
               onChange={(e) => setEmail(e.target.value)}
               placeholder="you@example.com"
-              className="w-full px-4 py-3 rounded-xl bg-white/90 text-gray-800
-                         focus:outline-none focus:ring-2 focus:ring-white"
+              className="mt-1 w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-white mb-1">
+            <label className="block text-sm font-medium mb-1" style={{ color: Sub_Headers_color }}>
               Password
             </label>
             <input
@@ -51,16 +50,15 @@ function Register() {
               required
               onChange={(e) => setPassword(e.target.value)}
               placeholder="Create a password"
-              className="w-full px-4 py-3 rounded-xl bg-white/90 text-gray-800
-                         focus:outline-none focus:ring-2 focus:ring-white"
+              className="mt-1 w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
           </div>
 
           <button
             type="submit"
             className="w-full py-3 rounded-xl font-semibold text-white
-                       bg-gradient-to-r from-indigo-500 to-purple-500
                        hover:scale-105 transition transform cursor-pointer"
+            style={{ backgroundColor: Primary_color }}
           >
             Register
           </button>

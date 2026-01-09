@@ -10,6 +10,7 @@ import Home from './views/Home.jsx'
 import Contact from './views/Contact.jsx'
 import Register from "./views/Signup.jsx";
 import Login from "./views/Login.jsx";
+import About from "./views/About.jsx";
 
 const root = createRoot(document.getElementById('root'));
 
@@ -22,7 +23,7 @@ root.render(
       <Route path="/" element={<Register/>} />
       <Route path="/home" element={<Home/>} />
        <Route path="/login" element={<Login/>} />
-      
+      <Route path="/about" element={<About/>} />
       <Route path="/products" element={<Products />} />
       <Route path="/contact" element={<Contact/>} />
      
