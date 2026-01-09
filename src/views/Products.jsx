@@ -6,9 +6,21 @@ import { useState } from 'react'
 
 function Products() {
   const [sortItem, setSortItem] = useState('');
-
-  if (sortItem === 'LowtoHigh') {
+  
+  if (sortItem === 'default') {
+    products.sort((a, b) => a.id - b.id);
+  }
+  else if (sortItem === 'LowtoHigh') {
     products.sort((a, b) => a.price - b.price);
+  }
+  else if (sortItem === 'HightoLow') {
+    products.sort((a, b) => b.price - a.price);
+  }
+  else if (sortItem === 'NameAtoZ') {
+    products.sort((a, b) => a.name.localeCompare(b.name));
+  }
+  else if (sortItem === 'NameZtoA') {
+    products.sort((a, b) => b.name.localeCompare(a.name));
   }
   return (
     <div className="min-h-screen py-8" style={{ backgroundColor: BG_color }}>
@@ -18,7 +30,7 @@ function Products() {
           onChange={(e) => setSortItem(e.target.value)}
           className="w-1/6 p-2 mb-6 rounded-md border border-gray-300 focus:outline-none focus:ring-1"
         >
-        <option value="default" disabled>Sort by</option>
+        <option value="default">Sort by</option>
         <option value="LowtoHigh">Price: Low to High</option>
         <option value="HightoLow">Price: High to Low</option>
         <option value="NameAtoZ">Name: A to Z</option>
