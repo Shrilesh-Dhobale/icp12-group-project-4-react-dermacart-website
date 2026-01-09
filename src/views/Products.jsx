@@ -6,6 +6,10 @@ import { useState } from 'react'
 
 function Products() {
   const [sortItem, setSortItem] = useState('');
+
+  if (sortItem === 'LowtoHigh') {
+    products.sort((a, b) => a.price - b.price);
+  }
   return (
     <div className="min-h-screen py-8" style={{ backgroundColor: BG_color }}>
       <div className='flex flex-row-reverse p-4 gap-4'>
@@ -14,7 +18,7 @@ function Products() {
           onChange={(e) => setSortItem(e.target.value)}
           className="w-1/6 p-2 mb-6 rounded-md border border-gray-300 focus:outline-none focus:ring-1"
         >
-        <option value="default">Sort By</option>
+        <option value="default" disabled>Sort by</option>
         <option value="LowtoHigh">Price: Low to High</option>
         <option value="HightoLow">Price: High to Low</option>
         <option value="NameAtoZ">Name: A to Z</option>
