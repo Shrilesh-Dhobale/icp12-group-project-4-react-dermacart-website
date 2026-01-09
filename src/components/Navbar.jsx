@@ -30,9 +30,9 @@ const Navbar = () => {
           <li>< Link to ="/Contact" 
           className="hover:text-green-700 cursor-pointer">Contact </Link></li>
         </ul>
-             <div>
-                    <Button title={"Order Now"} variant='primary' size='lg' onClick={()=>{
-                        navigate(`/Order`)
+             <div className="flex items-center gap-4">
+                    <Button title={"Logout"} variant='primary' size='lg' onClick={()=>{
+                        navigate(`/login`)
                     }}/>
                    {/* Mobile */}
                  <button

@@ -42,13 +42,13 @@ export default function Contact() {
         <form onSubmit={handleSubmit} className="mt-8 space-y-6">
           {/* Name */}
           <div>
-            <label className="block text-sm font-medium text-[#4b3b2a]">
+            <label className="block text-sm font-medium " style={{ color: Sub_Headers_color }}>
               Full Name
             </label>
             <input
               type="text"
               required
-              className="mt-2 w-full rounded-lg border border-[#d6cfc4] px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#b89b7a]"
+              className="mt-1 w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-1"
             />
           </div>
 
@@ -60,7 +60,7 @@ export default function Contact() {
             <input
               type="email"
               required
-              className="mt-2 w-full rounded-lg border border-[#d6cfc4] px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#b89b7a]"
+              className="mt-1 w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-1"
             />
           </div>
 
@@ -72,7 +72,7 @@ export default function Contact() {
             <textarea
               rows="4"
               required
-              className="mt-2 w-full rounded-lg border border-[#d6cfc4] px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#b89b7a]"
+              className="mt-2 w-full rounded-lg border border-[#d6cfc4] px-4 py-3 focus:outline-none focus:ring-1 "
             ></textarea>
           </div>
 

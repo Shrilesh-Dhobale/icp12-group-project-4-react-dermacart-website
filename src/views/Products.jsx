@@ -4,6 +4,7 @@ import { BG_color } from '../config/app.js'
 import ProductCard from '../components/ProductCard.jsx'
 import Navbar from '../components/Navbar.jsx'
 import { useState } from 'react'
+import Footer from '../components/Footer.jsx'
 
 function Products() {
   const [sortItem, setSortItem] = useState('');
@@ -58,11 +59,12 @@ function Products() {
           <ProductCard key={product.id} product={product} />
         ))}
         </div>
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 mb-8">
           {filteredProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
+        <Footer />
       </div>
     </>
   )
