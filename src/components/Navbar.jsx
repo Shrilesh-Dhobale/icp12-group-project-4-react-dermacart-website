@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Button from "./Button";
-import logo from "../components/logo-navbar1.jpeg"
+import logo from "../assets/logo-navbar.jpeg"
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
