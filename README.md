@@ -73,15 +73,6 @@ Live Project:  https://dermacart.netlify.app/
 
 ## 👥 Contributors
 
-<p align="center">
-<span><a href="https://github.com/shreya-harde"><svg width="90" height="90"><defs><clipPath id="c1"><circle cx="45" cy="45" r="40"/></clipPath></defs><image href="https://avatars.githubusercontent.com/shreya-harde" width="90" height="90" clip-path="url(#c1)"/></svg></a></span>
-<span><a href="https://github.com/Shrilesh-Dhobale"><svg width="90" height="90"><defs><clipPath id="c2"><circle cx="45" cy="45" r="40"/></clipPath></defs><image href="https://avatars.githubusercontent.com/Shrilesh-Dhobale" width="90" height="90" clip-path="url(#c2)"/></svg></a></span>
-<span><a href="https://github.com/OmKadam-1"><svg width="90" height="90"><defs><clipPath id="c3"><circle cx="45" cy="45" r="40"/></clipPath></defs><image href="https://avatars.githubusercontent.com/OmKadam-1" width="90" height="90" clip-path="url(#c3)"/></svg></a></span>
-<span><a href="https://github.com/suraj0620"><svg width="90" height="90"><defs><clipPath id="c4"><circle cx="45" cy="45" r="40"/></clipPath></defs><image href="https://avatars.githubusercontent.com/suraj0620" width="90" height="90" clip-path="url(#c4)"/></svg></a></span>
-<span><a href="https://github.com/kalyanimurkute"><svg width="90" height="90"><defs><clipPath id="c5"><circle cx="45" cy="45" r="40"/></clipPath></defs><image href="https://avatars.githubusercontent.com/kalyanimurkute" width="90" height="90" clip-path="url(#c5)"/></svg></a></span>
-<span><a href="https://github.com/NikitaChormale"><svg width="90" height="90"><defs><clipPath id="c6"><circle cx="45" cy="45" r="40"/></clipPath></defs><image href="https://avatars.githubusercontent.com/NikitaChormale" width="90" height="90" clip-path="url(#c6)"/></svg></a></span>
-</p>
-
-
-
-
+<a href="https://github.com/Shrilesh-Dhobale/icp12-group-project-4-react-dermacart-website/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Shrilesh-Dhobale/icp12-group-project-4-react-dermacart-website" />
+</a>
