@@ -73,7 +73,7 @@ Live Project:  https://dermacart.netlify.app/
 
 ## 👥 Contributors
 
-## 👥 Contributors
+
 
 <p align="center">
 <span><a href="https://github.com/shreya-harde"><svg width="90" height="90"><defs><clipPath id="c1"><circle cx="45" cy="45" r="40"/></clipPath></defs><image href="https://avatars.githubusercontent.com/shreya-harde" width="90" height="90" clip-path="url(#c1)"/></svg></a></span>
