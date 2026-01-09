@@ -13,19 +13,19 @@ function Products() {
   );
 
   if (sortItem === 'default') {
-    products.sort((a, b) => a.id - b.id);
+    filteredProducts.sort((a, b) => a.id - b.id);
   }
   else if (sortItem === 'LowtoHigh') {
-    products.sort((a, b) => a.price - b.price);
+    filteredProducts.sort((a, b) => a.price - b.price);
   }
   else if (sortItem === 'HightoLow') {
-    products.sort((a, b) => b.price - a.price);
+    filteredProducts.sort((a, b) => b.price - a.price);
   }
   else if (sortItem === 'NameAtoZ') {
-    products.sort((a, b) => a.name.localeCompare(b.name));
+    filteredProducts.sort((a, b) => a.name.localeCompare(b.name));
   }
   else if (sortItem === 'NameZtoA') {
-    products.sort((a, b) => b.name.localeCompare(a.name));
+    filteredProducts.sort((a, b) => b.name.localeCompare(a.name));
   }
   return (
     <div className="min-h-screen py-8" style={{ backgroundColor: BG_color }}>
