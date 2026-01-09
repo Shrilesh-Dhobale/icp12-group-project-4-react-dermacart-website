@@ -2,11 +2,8 @@ import React, { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import QuizOption from "../components/QuizQuestion";
 import quizData from "../config/quizQuestions";
+import products from "../config/products";
 import bgImage from "../assets/bg-2.jpeg";
-import oilClean from "../assets/oil-clean.jpeg";
-import cream from "../assets/cream.jpeg";
-import normalProduct from "../assets/normal.jpeg";
-import combinationProduct from "../assets/combination.jpeg";
 
 function Quiz() {
   const [current, setCurrent] = useState(0);
@@ -57,44 +54,16 @@ function Quiz() {
     setSelected(answers[prevQuestionId] || null);
   }
 
-  const productMap = {
-    oily: [
-      {
-        id: "o1",
-        name: "Oil Control Cleanser",
-        desc: "Controls sebum and reduces shine",
-        image: oilClean,
-      },
-    ],
-    dry: [
-      {
-        id: "d1",
-        name: "Hydrating Cream",
-        desc: "Deep hydration for dry skin",
-        image: cream,
-      },
-    ],
-    normal: [
-      {
-        id: "n1",
-        name: "Daily Balancer",
-        desc: "Maintains healthy skin",
-        image: normalProduct,
-      },
-    ],
-    combination: [
-      {
-        id: "c1",
-        name: "Balance Lotion",
-        desc: "Hydrates dry areas, controls oily zones",
-        image: combinationProduct,
-      },
-    ],
-  };
-
-  function useProduct(product) {
-    toast.success(`You can use: ${product.name}`);
-    localStorage.setItem("skinTypeResult", resultKey);
+  function getFilteredProducts() {
+    const resultTypeMap = {
+      oily: "Oily",
+      dry: "Dry",
+      normal: "Normal",
+      combination: "Combination",
+    };
+    
+    const skinTypeForFilter = resultTypeMap[result];
+    return products.filter((p) => p.type === skinTypeForFilter);
   }
 
   function restart() {
@@ -167,20 +136,20 @@ function Quiz() {
             </p>
 
             <div className="space-y-2">
-              {(productMap[result] || []).map((p) => (
+              {getFilteredProducts().map((p) => (
                 <div
                   key={p.id}
                   className="flex items-center gap-2 border rounded-xl px-3 py-2 bg-white/40"
                 >
                   <img
-                    src={p.image}
+                    src={p.img}
                     alt={p.name}
                     className="w-10 h-10 rounded-full object-cover"
                   />
 
                   <div className="flex-1">
                     <div className="text-lg font-medium">{p.name}</div>  
-                    <div className="text-md text-gray-600">{p.desc}</div>
+                    <div className="text-md text-gray-600">{p.description}</div>
                   </div>
                 </div>
 
@@ -188,8 +157,8 @@ function Quiz() {
             </div>
             <button
               onClick={() => {
-                const url = `./../Products.jsx ?skinType=${result}`;
-                window.open(url, "   ");
+                const url = `/Products?skinType=${result}`;
+                window.location.href = url;
               }}
               className="mt-4 w-full py-2 text-sm rounded-xl font-semibold bg-[#2f5d50] text-white active:scale-95"
             >
