@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import Button from "../components/Button";
 import { useNavigate } from "react-router-dom";
 import "./../index.css"
+import { BG_color,Primary_color,Hero_BG_color} from "../config/app.js";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -11,7 +12,7 @@ const Home = () => {
       <Navbar />
      
 
-      <section className="my-2 min-h-[90vh] flex items-center">
+      <section className="my-2 min-h-[100vh] flex items-center mt-0 mb-0" style={{ backgroundColor: Hero_BG_color }}>
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10">
 
           <div>
