@@ -1,6 +1,6 @@
 import React from 'react'
 const VARIANTS={
-    primary:"bg-[#2F5D50] text-[#E3E3E3]  font-semiBold cursor-pointer hover:shadow-lg "
+    primary:`bg-[#2f5d50] text-[#fbf6f1] font-semibold cursor-pointer hover:shadow-lg `
 }
 const SIZE={
     sm:"text-sm px-4 m-1 rounded-sm",
