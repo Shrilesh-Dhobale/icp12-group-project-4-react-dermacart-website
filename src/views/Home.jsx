@@ -40,7 +40,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="bg-white p-8 rounded-2xl shadow-lg">
+          <div className=" p-8 rounded-2xl shadow-lg" style={{ backgroundColor: BG_color }}>
             <h2 className="text-xl font-semibold mb-4">
               Why Choose DermaCart?
             </h2>
