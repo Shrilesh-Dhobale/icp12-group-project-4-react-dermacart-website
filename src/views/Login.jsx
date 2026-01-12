@@ -15,7 +15,7 @@ function Login() {
 
     if (email === storedEmail && password === storedPassword) {
       alert("Login Successful");
-      navigate("/home");
+      navigate("/");
     } else {
       alert("Invalid Credentials");
     }
@@ -65,7 +65,7 @@ function Login() {
          <p className="text-center text-sm text-gray-600">
           Don’t have an account?{" "}
           <button
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/register")}
             className="text-indigo-600 font-medium cursor-pointer hover:underline"
           >
             Register
