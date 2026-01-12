@@ -14,7 +14,7 @@ const Navbar = () => {
        <img
   src={logo}
   alt="Dermacart Logo"
-  className="h-20 w-auto cursor-pointer"
+  className="h-16 w-auto cursor-pointer"
 />
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-8 text-gray-700 font-medium text-lg">
