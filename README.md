@@ -44,9 +44,6 @@ Users can sign up, log in, take a skin quiz, add products to a cart, and contact
 - Displays available skincare products  
 - Users can add products to the cart  
 
-### 🛒 Cart Page
-- Shows selected products  
-- Calculates total price  
 
 ---
 
