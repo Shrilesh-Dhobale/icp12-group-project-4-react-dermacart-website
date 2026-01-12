@@ -53,9 +53,6 @@ Users can sign up, log in, take a skin quiz, add products to a cart, and contact
 ## 📁 Folder Structure
 
 
-📸 Folder Structure Screenshot:  
-Folder Structure Screenshot:
-
 ![Folder Structure](./src/assets/folder.png)
 
 
