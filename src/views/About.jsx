@@ -184,6 +184,82 @@ const About = () => {
           </div>
         </section>
 
+        <section className="bg-white py-20">
+  <div className="max-w-6xl mx-auto px-6">
+    <h2 className="text-3xl font-semibold mb-12 text-center">
+      What Our Customers Say
+    </h2>
+
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <div className="bg-[#FBF6F1] p-8 rounded-2xl shadow-sm">
+        <div className="flex mb-4">
+          {"★★★★★".split("").map((_, i) => (
+            <span key={i} className="text-[#2F5D50] text-lg">★</span>
+          ))}
+        </div>
+        <p className="text-[#6B8F71] text-lg leading-relaxed mb-6">
+          “DermaCart completely transformed my skincare routine. My acne reduced
+          significantly within a month.”
+        </p>
+        <h4 className="text-[#2F5D50] font-semibold text-lg">
+          Aishwarya K.
+        </h4>
+        <span className="text-sm text-[#6B8F71]">Oily Skin</span>
+      </div>
+
+      <div className="bg-[#FBF6F1] p-8 rounded-2xl shadow-sm">
+        <div className="flex mb-4">
+          {"★★★★☆".split("").map((star, i) => (
+            <span key={i} className="text-[#2F5D50] text-lg">{star}</span>
+          ))}
+        </div>
+        <p className="text-[#6B8F71] text-lg leading-relaxed mb-6">
+          “I have very sensitive skin and DermaCart products are gentle yet
+          effective. No irritation at all.”
+        </p>
+        <h4 className="text-[#2F5D50] font-semibold text-lg">
+          Rahul M.
+        </h4>
+        <span className="text-sm text-[#6B8F71]">Sensitive Skin</span>
+      </div>
+
+      <div className="bg-[#FBF6F1] p-8 rounded-2xl shadow-sm">
+        <div className="flex mb-4">
+          {"★★★★★".split("").map((_, i) => (
+            <span key={i} className="text-[#2F5D50] text-lg">★</span>
+          ))}
+        </div>
+        <p className="text-[#6B8F71] text-lg leading-relaxed mb-6">
+          “Finally found honest skincare with transparent ingredients. The
+          hydration and glow are noticeable.”
+        </p>
+        <h4 className="text-[#2F5D50] font-semibold text-lg">
+          Neha S.
+        </h4>
+        <span className="text-sm text-[#6B8F71]">Dry Skin</span>
+      </div>
+
+      <div className="bg-[#FBF6F1] p-8 rounded-2xl shadow-sm">
+        <div className="flex mb-4">
+          {"★★★★☆".split("").map((star, i) => (
+            <span key={i} className="text-[#2F5D50] text-lg">{star}</span>
+          ))}
+        </div>
+        <p className="text-[#6B8F71] text-lg leading-relaxed mb-6">
+          “Great balance of science and natural ingredients. Pricing is fair and
+          results are consistent.”
+        </p>
+        <h4 className="text-[#2F5D50] font-semibold text-lg">
+          Karan P.
+        </h4>
+        <span className="text-sm text-[#6B8F71]">Normal Skin</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
         <section className="py-28 text-center">
           <h2 className="text-4xl font-semibold mb-6">
             Thoughtful Skincare Starts Here
@@ -192,7 +268,7 @@ const About = () => {
             Discover skincare that blends science, nature, and transparency —
             only at DermaCart.
           </p>
-          <Link to="/" className="bg-[#2F5D50] hover:bg-[#264B41] text-white px-12 py-4 rounded-full text-lg transition inline-block">
+          <Link to="/products" className="bg-[#2F5D50] hover:bg-[#264B41] text-white px-12 py-4 rounded-full text-lg transition inline-block">
             Explore DermaCart
           </Link>
         </section>
